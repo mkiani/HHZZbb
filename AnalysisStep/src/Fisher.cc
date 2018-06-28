@@ -1,4 +1,4 @@
-#include <ZZAnalysis/AnalysisStep/interface/Fisher.h>
+#include <HHZZbb/AnalysisStep/interface/Fisher.h>
 #include <cmath>
 
 float fisher(float mjj, float detajj) {

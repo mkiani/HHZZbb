@@ -10,7 +10,7 @@
 
 
 #include <DataFormats/PatCandidates/interface/CompositeCandidate.h>
-#include <ZZAnalysis/AnalysisStep/interface/PhotonFwd.h>
+#include <HHZZbb/AnalysisStep/interface/PhotonFwd.h>
 
 #include <string>
 #include <vector>

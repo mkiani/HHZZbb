@@ -1,5 +1,5 @@
 // Include classes
-#include <ZZAnalysis/AnalysisStep/test/Plotter_v2/include/Settings.h>
+#include <HHZZbb/AnalysisStep/test/Plotter_v2/include/Settings.h>
 
 using namespace std;
 

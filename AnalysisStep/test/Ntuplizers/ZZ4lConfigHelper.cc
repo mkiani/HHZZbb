@@ -1,6 +1,6 @@
 #include "ZZ4lConfigHelper.h"
 #include "ZZ4lConfigHelper.h"
-#include <ZZAnalysis/AnalysisStep/interface/bitops.h>
+#include <HHZZbb/AnalysisStep/interface/bitops.h>
 
 using namespace std;
 using namespace edm;

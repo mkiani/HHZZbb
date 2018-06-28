@@ -13,9 +13,9 @@
 
 #include <DataFormats/Math/interface/deltaR.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/CutSet.h>
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
-#include <ZZAnalysis/AnalysisStep/interface/BTaggingSFHelper.h>
+#include <HHZZbb/AnalysisStep/interface/CutSet.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/BTaggingSFHelper.h>
 
 #include "TRandom3.h"
 

@@ -1,5 +1,5 @@
 // Include classes
-#include <ZZAnalysis/AnalysisStep/test/Plotter_v2/include/CMS_lumi.h>
+#include <HHZZbb/AnalysisStep/test/Plotter_v2/include/CMS_lumi.h>
 #include <iostream>
 
 

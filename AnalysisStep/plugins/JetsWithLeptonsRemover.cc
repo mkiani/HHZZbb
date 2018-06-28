@@ -23,8 +23,8 @@
 #include "DataFormats/PatCandidates/interface/Electron.h"
 #include "DataFormats/PatCandidates/interface/CompositeCandidate.h"
 #include "CommonTools/Utils/interface/StringCutObjectSelector.h"
-#include <ZZAnalysis/AnalysisStep/interface/PhotonFwd.h>
-#include <ZZAnalysis/AnalysisStep/interface/DaughterDataHelpers.h>
+#include <HHZZbb/AnalysisStep/interface/PhotonFwd.h>
+#include <HHZZbb/AnalysisStep/interface/DaughterDataHelpers.h>
 
 #include "DataFormats/PatCandidates/interface/Jet.h"
 #include "DataFormats/Math/interface/Vector3D.h"

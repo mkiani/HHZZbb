@@ -14,7 +14,7 @@
 #include <DataFormats/PatCandidates/interface/Muon.h>
 
 // Rochester Muon Corrections
-#include <ZZAnalysis/AnalysisStep/plugins/RoccoR.h>
+#include <HHZZbb/AnalysisStep/plugins/RoccoR.h>
 
 
 #include "TLorentzVector.h"
@@ -65,9 +65,9 @@ RochesterPATMuonCorrector::RochesterPATMuonCorrector(const edm::ParameterSet& iC
   rgen_(0)
 {
   stringstream ss;
-  ss << "ZZAnalysis/AnalysisStep/data/RochesterCorrections/" << identifier_ << ".txt";
+  ss << "HHZZbb/AnalysisStep/data/RochesterCorrections/" << identifier_ << ".txt";
   string path_string = ss.str();
-  edm::FileInPath corrPath("ZZAnalysis/AnalysisStep/data/RochesterCorrections/"+identifier_+".txt");
+  edm::FileInPath corrPath("HHZZbb/AnalysisStep/data/RochesterCorrections/"+identifier_+".txt");
 	
   calibrator = new RoccoR(corrPath.fullPath());
   rgen_ = new TRandom3(0);

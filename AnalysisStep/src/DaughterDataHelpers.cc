@@ -1,4 +1,4 @@
-#include <ZZAnalysis/AnalysisStep/interface/DaughterDataHelpers.h>
+#include <HHZZbb/AnalysisStep/interface/DaughterDataHelpers.h>
 
 #include <DataFormats/PatCandidates/interface/CompositeCandidate.h>
 #include <DataFormats/PatCandidates/interface/Muon.h>

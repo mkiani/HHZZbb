@@ -29,14 +29,14 @@
 #include "THStack.h"
 
 // Include classes
-#include <ZZAnalysis/AnalysisStep/test/ZpXEstimation/include/Tree.h>
-#include <ZZAnalysis/AnalysisStep/test/ZpXEstimation/include/Settings.h>
-#include <ZZAnalysis/AnalysisStep/test/ZpXEstimation/include/Plots.h>
-#include <ZZAnalysis/AnalysisStep/interface/Category.h>
-#include <ZZAnalysis/AnalysisStep/interface/FinalStates.h>
-#include <ZZAnalysis/AnalysisStep/test/ZpXEstimation/include/FakeRates.h>
-#include <ZZAnalysis/AnalysisStep/interface/bitops.h>
-#include <ZZAnalysis/AnalysisStep/test/ZpXEstimation/include/CMS_lumi.h>
+#include <HHZZbb/AnalysisStep/test/ZpXEstimation/include/Tree.h>
+#include <HHZZbb/AnalysisStep/test/ZpXEstimation/include/Settings.h>
+#include <HHZZbb/AnalysisStep/test/ZpXEstimation/include/Plots.h>
+#include <HHZZbb/AnalysisStep/interface/Category.h>
+#include <HHZZbb/AnalysisStep/interface/FinalStates.h>
+#include <HHZZbb/AnalysisStep/test/ZpXEstimation/include/FakeRates.h>
+#include <HHZZbb/AnalysisStep/interface/bitops.h>
+#include <HHZZbb/AnalysisStep/test/ZpXEstimation/include/CMS_lumi.h>
 
 using namespace std;
 

@@ -18,15 +18,15 @@
 #include <DataFormats/PatCandidates/interface/Electron.h>
 #include <DataFormats/PatCandidates/interface/Photon.h>
 #include <DataFormats/PatCandidates/interface/PFParticle.h>
-#include <ZZAnalysis/AnalysisStep/interface/PhotonFwd.h>
+#include <HHZZbb/AnalysisStep/interface/PhotonFwd.h>
 #include <DataFormats/GeometryVector/interface/VectorUtil.h> 
 #include <DataFormats/VertexReco/interface/Vertex.h>
 #include <DataFormats/ParticleFlowCandidate/interface/PFCandidate.h>
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/CutSet.h>
+#include <HHZZbb/AnalysisStep/interface/CutSet.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/MCHistoryTools.h>
+#include <HHZZbb/AnalysisStep/interface/MCHistoryTools.h>
 #include <Math/VectorUtil.h>
 #include <TMath.h>
 

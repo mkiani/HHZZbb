@@ -19,7 +19,7 @@ MCFILTER = ""
 
 # Get absolute path
 import os
-PyFilePath = os.environ['CMSSW_BASE'] + "/src/ZZAnalysis/AnalysisStep/test/"
+PyFilePath = os.environ['CMSSW_BASE'] + "/src/HHZZbb/AnalysisStep/test/"
 
 ### ----------------------------------------------------------------------
 ### Standard sequence

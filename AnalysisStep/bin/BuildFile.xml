@@ -1,36 +1,36 @@
-<use name="ZZAnalysis/AnalysisStep"/>
+<use name="HHZZbb/AnalysisStep"/>
 
 <use   name="root"/>
 <use   name="roottmva"/>
 <use name="rootrflx"/>
 <use name="roofitcore"/>
 
-<library   file="../test/Plotter_v2/src/*.cpp" name="ZZAnalysisAnalysisStepTestPlotter_v2Src">
+<library   file="../test/Plotter_v2/src/*.cpp" name="HHZZbbAnalysisStepTestPlotter_v2Src">
 </library>
 
 <bin   name="run_plotter" file="../test/Plotter_v2/run_plotter.cpp">
-   <lib   name="ZZAnalysisAnalysisStepTestPlotter_v2Src"/>
+   <lib   name="HHZZbbAnalysisStepTestPlotter_v2Src"/>
 </bin>
 
 <bin   name="run_yields" file="../test/Plotter_v2/run_yields.cpp">
-   <lib   name="ZZAnalysisAnalysisStepTestPlotter_v2Src"/>
+   <lib   name="HHZZbbAnalysisStepTestPlotter_v2Src"/>
 </bin>
 
 <bin   name="run_systematics" file="../test/Plotter_v2/run_systematics.cpp">
-   <lib   name="ZZAnalysisAnalysisStepTestPlotter_v2Src"/>
+   <lib   name="HHZZbbAnalysisStepTestPlotter_v2Src"/>
 </bin>
 
 <bin   name="run_combination" file="../test/Plotter_v2/run_combination.cpp">
-   <lib   name="ZZAnalysisAnalysisStepTestPlotter_v2Src"/>
+   <lib   name="HHZZbbAnalysisStepTestPlotter_v2Src"/>
 </bin>
 
-<library   file="../test/ZpXEstimation/src/*.cpp" name="ZZAnalysisAnalysisStepTestZpXEstimationSrc">
+<library   file="../test/ZpXEstimation/src/*.cpp" name="HHZZbbAnalysisStepTestZpXEstimationSrc">
 </library>
 
 <bin   name="run_OS" file="../test/ZpXEstimation/run_OS.cpp">
-   <lib   name="ZZAnalysisAnalysisStepTestZpXEstimationSrc"/>
+   <lib   name="HHZZbbAnalysisStepTestZpXEstimationSrc"/>
 </bin>
 
 <bin   name="run_SS" file="../test/ZpXEstimation/run_SS.cpp">
-   <lib   name="ZZAnalysisAnalysisStepTestZpXEstimationSrc"/>
+   <lib   name="HHZZbbAnalysisStepTestZpXEstimationSrc"/>
 </bin>

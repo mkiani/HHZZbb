@@ -1,6 +1,6 @@
-#include <ZZAnalysis/AnalysisStep/interface/Category.h>
-#include <ZZAnalysis/AnalysisStep/interface/Discriminants.h>
-#include <ZZAnalysis/AnalysisStep/interface/cConstants.h>
+#include <HHZZbb/AnalysisStep/interface/Category.h>
+#include <HHZZbb/AnalysisStep/interface/Discriminants.h>
+#include <HHZZbb/AnalysisStep/interface/cConstants.h>
 
 #include <cmath>
 #include <iostream>

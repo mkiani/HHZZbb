@@ -97,7 +97,7 @@ YR4data_BR_ZZ = {
 }
 
 def BR_fromoldspreadsheet(p, m):
-  with contextlib.closing(urllib.urlopen("https://raw.githubusercontent.com/CJLST/ZZAnalysis/87bce99aa845936454ce302a70095797b81c194c/AnalysisStep/test/prod/samples_2016_MC.csv")) as f:
+  with contextlib.closing(urllib.urlopen("https://raw.githubusercontent.com/CJLST/HHZZbb/87bce99aa845936454ce302a70095797b81c194c/AnalysisStep/test/prod/samples_2016_MC.csv")) as f:
     reader = csv.DictReader(f)
     for row in reader:
       if re.match("#*"+p+str(m)+"$", row["identifier"]):
@@ -127,7 +127,7 @@ def BR_YR3(mass, productionmode):
   if 120 <= mass <= 130: assert False
 
   #need to get ZZ2l2x BR
-  #from the comment here: https://github.com/CJLST/ZZAnalysis/blob/454fffb5842f470e71e89348a6de7a8d30f4a813/AnalysisStep/test/prod/samples_2016_MC.csv#L5-L6
+  #from the comment here: https://github.com/CJLST/HHZZbb/blob/454fffb5842f470e71e89348a6de7a8d30f4a813/AnalysisStep/test/prod/samples_2016_MC.csv#L5-L6
   #it doesn't say how to get BR(H->ZZ*->2L2nu) or BR(H->WW*->2L2nu)
   #llnunu  = ZZllnunu + WWlnulnu
   #        = ZZllnunu + 9*WWemununu

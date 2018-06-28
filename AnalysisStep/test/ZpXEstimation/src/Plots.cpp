@@ -1,5 +1,5 @@
 // Include classes
-#include <ZZAnalysis/AnalysisStep/test/ZpXEstimation/include/Plots.h>
+#include <HHZZbb/AnalysisStep/test/ZpXEstimation/include/Plots.h>
 
 using namespace std;
 

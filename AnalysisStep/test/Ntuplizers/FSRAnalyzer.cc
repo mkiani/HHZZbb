@@ -13,10 +13,10 @@
 #include <DataFormats/PatCandidates/interface/CompositeCandidate.h>
 #include <DataFormats/VertexReco/interface/Vertex.h>
 #include "SimDataFormats/PileupSummaryInfo/interface/PileupSummaryInfo.h"
-#include <ZZAnalysis/AnalysisStep/interface/DaughterDataHelpers.h>
-#include <ZZAnalysis/AnalysisStep/interface/MCHistoryTools.h>
-#include <ZZAnalysis/AnalysisStep/interface/FinalStates.h>
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/DaughterDataHelpers.h>
+#include <HHZZbb/AnalysisStep/interface/MCHistoryTools.h>
+#include <HHZZbb/AnalysisStep/interface/FinalStates.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
 
 #include <Math/VectorUtil.h>
 

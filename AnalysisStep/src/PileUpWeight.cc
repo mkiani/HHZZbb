@@ -3,7 +3,7 @@
  */
 
 
-#include "ZZAnalysis/AnalysisStep/interface/PileUpWeight.h"
+#include "HHZZbb/AnalysisStep/interface/PileUpWeight.h"
 #include "FWCore/Framework/interface/Frameworkfwd.h"
 #include "FWCore/MessageLogger/interface/MessageLogger.h"
 #include "FWCore/ParameterSet/interface/FileInPath.h"
@@ -27,7 +27,7 @@ PileUpWeight::PileUpWeight(int MC, int target) {
 
  if (MC==2016 && target==2016)
  {
-    edm::FileInPath fip("ZZAnalysis/AnalysisStep/data/PileUpWeights/puWeightsMoriond17_v2.root");
+    edm::FileInPath fip("HHZZbb/AnalysisStep/data/PileUpWeights/puWeightsMoriond17_v2.root");
 
     TFile *fPUWeight = TFile::Open(fip.fullPath().data(),"READ");
 
@@ -41,7 +41,7 @@ PileUpWeight::PileUpWeight(int MC, int target) {
 
  else if (MC==2016 && target==2017)
  {
-    edm::FileInPath fip("ZZAnalysis/AnalysisStep/data/PileUpWeights/puWeight_Spring2016MC_to_2017Data_294927-301141.root");
+    edm::FileInPath fip("HHZZbb/AnalysisStep/data/PileUpWeights/puWeight_Spring2016MC_to_2017Data_294927-301141.root");
 
     TFile *fPUWeight = TFile::Open(fip.fullPath().data(),"READ");
 
@@ -54,7 +54,7 @@ PileUpWeight::PileUpWeight(int MC, int target) {
 	
  else if (MC==2017 && target==2017)
  {
-		edm::FileInPath fip("ZZAnalysis/AnalysisStep/data/PileUpWeights/puWeightsMoriond18.root");
+		edm::FileInPath fip("HHZZbb/AnalysisStep/data/PileUpWeights/puWeightsMoriond18.root");
 		
 		TFile *fPUWeight = TFile::Open(fip.fullPath().data(),"READ");
 		
@@ -67,7 +67,7 @@ PileUpWeight::PileUpWeight(int MC, int target) {
  
  else if (MC==2017 && target==2018)
  {
-		edm::FileInPath fip("ZZAnalysis/AnalysisStep/data/PileUpWeights/puWeights_Fall2017MC_to_2018Data_314472-317591.root");
+		edm::FileInPath fip("HHZZbb/AnalysisStep/data/PileUpWeights/puWeights_Fall2017MC_to_2018Data_314472-317591.root");
 		
 		TFile *fPUWeight = TFile::Open(fip.fullPath().data(),"READ");
 		

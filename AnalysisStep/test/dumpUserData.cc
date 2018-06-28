@@ -18,7 +18,7 @@
 #include <DataFormats/PatCandidates/interface/Muon.h>
 #include <DataFormats/PatCandidates/interface/Electron.h>
 #include <DataFormats/PatCandidates/interface/Jet.h>
-#include <ZZAnalysis/AnalysisStep/interface/PhotonFwd.h>
+#include <HHZZbb/AnalysisStep/interface/PhotonFwd.h>
 #include <DataFormats/Common/interface/TriggerResults.h>
 #include <FWCore/Common/interface/TriggerNames.h>
 

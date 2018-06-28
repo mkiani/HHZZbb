@@ -407,7 +407,7 @@ samples = [
 
 # Load deafult job config
 import os
-PyFilePath = os.environ['CMSSW_BASE'] + "/src/ZZAnalysis/AnalysisStep/test/"
+PyFilePath = os.environ['CMSSW_BASE'] + "/src/HHZZbb/AnalysisStep/test/"
 execfile(PyFilePath + "analyzer.py")        
 
 # Silence output

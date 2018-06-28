@@ -1,5 +1,5 @@
 // Include classes
-#include <ZZAnalysis/AnalysisStep/test/Plotter_v2/include/Plotter.h>
+#include <HHZZbb/AnalysisStep/test/Plotter_v2/include/Plotter.h>
 
 // Constructor
 //============================================================

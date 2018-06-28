@@ -1,5 +1,5 @@
-#include "ZZAnalysis/AnalysisStep/interface/CompositeCandMassResolution.h"
-#include <ZZAnalysis/AnalysisStep/interface/PhotonFwd.h>
+#include "HHZZbb/AnalysisStep/interface/CompositeCandMassResolution.h"
+#include <HHZZbb/AnalysisStep/interface/PhotonFwd.h>
 
 #include <cmath>
 #include "DataFormats/Candidate/interface/Candidate.h"
@@ -136,7 +136,7 @@ void CompositeCandMassResolution::fillP3Covariance(const reco::GsfElectron &c, T
         dp = c.p4Error(reco::GsfElectron::P4_COMBINATION);
     } else {
         // Parametrization from Claude Charlot, 
-        // http://cmssw.cvs.cern.ch/cgi-bin/cmssw.cgi/UserCode/CJLST/ZZAnalysis/AnalysisStep/src/ZZMassErrors.cc?revision=1.2&view=markup
+        // http://cmssw.cvs.cern.ch/cgi-bin/cmssw.cgi/UserCode/CJLST/HHZZbb/AnalysisStep/src/ZZMassErrors.cc?revision=1.2&view=markup
 #if CMSSW_VERSION<500
         double ecalEnergy = c.ecalEnergy() ;
 #else

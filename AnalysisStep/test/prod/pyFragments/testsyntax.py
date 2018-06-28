@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import os
-from ZZAnalysis.AnalysisStep import miscenums
+from HHZZbb.AnalysisStep import miscenums
 
 class DummyThingThatHasAnyAttribute(object):
     def __getattr__(self, attr):

@@ -43,24 +43,24 @@
 #include <SimDataFormats/GeneratorProducts/interface/LHEEventProduct.h>
 #include <SimDataFormats/GeneratorProducts/interface/GenEventInfoProduct.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/DaughterDataHelpers.h>
-#include <ZZAnalysis/AnalysisStep/interface/FinalStates.h>
-#include <ZZAnalysis/AnalysisStep/interface/MCHistoryTools.h>
-//#include <ZZAnalysis/AnalysisStep/interface/PileUpWeight.h>
-#include <ZZAnalysis/AnalysisStep/interface/PileUpWeight.h>
+#include <HHZZbb/AnalysisStep/interface/DaughterDataHelpers.h>
+#include <HHZZbb/AnalysisStep/interface/FinalStates.h>
+#include <HHZZbb/AnalysisStep/interface/MCHistoryTools.h>
+//#include <HHZZbb/AnalysisStep/interface/PileUpWeight.h>
+#include <HHZZbb/AnalysisStep/interface/PileUpWeight.h>
 #include "SimDataFormats/HTXS/interface/HiggsTemplateCrossSections.h"
 
 
-#include "ZZAnalysis/AnalysisStep/interface/EwkCorrections.h"
-#include "ZZAnalysis/AnalysisStep/interface/LHEHandler.h"
-#include "ZZAnalysis/AnalysisStep/src/kFactors.C"
-#include <ZZAnalysis/AnalysisStep/interface/bitops.h>
-#include <ZZAnalysis/AnalysisStep/interface/Fisher.h>
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
-#include <ZZAnalysis/AnalysisStep/interface/JetCleaner.h>
-#include <ZZAnalysis/AnalysisStep/interface/utils.h>
-#include <ZZAnalysis/AnalysisStep/interface/miscenums.h>
-#include <ZZAnalysis/AnalysisStep/interface/ggF_qcd_uncertainty_2017.h>
+#include "HHZZbb/AnalysisStep/interface/EwkCorrections.h"
+#include "HHZZbb/AnalysisStep/interface/LHEHandler.h"
+#include "HHZZbb/AnalysisStep/src/kFactors.C"
+#include <HHZZbb/AnalysisStep/interface/bitops.h>
+#include <HHZZbb/AnalysisStep/interface/Fisher.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/JetCleaner.h>
+#include <HHZZbb/AnalysisStep/interface/utils.h>
+#include <HHZZbb/AnalysisStep/interface/miscenums.h>
+#include <HHZZbb/AnalysisStep/interface/ggF_qcd_uncertainty_2017.h>
 
 #include <MelaAnalytics/CandidateLOCaster/interface/MELACandidateRecaster.h>
 
@@ -635,7 +635,7 @@ HZZ4lNtupleMaker::HZZ4lNtupleMaker(const edm::ParameterSet& pset) :
   std::string fipPath;
 
   // Read EWK K-factor table from file
-  edm::FileInPath ewkFIP("ZZAnalysis/AnalysisStep/data/kfactors/ZZ_EwkCorrections.dat");
+  edm::FileInPath ewkFIP("HHZZbb/AnalysisStep/data/kfactors/ZZ_EwkCorrections.dat");
   fipPath=ewkFIP.fullPath();
   ewkTable = EwkCorrections::readFile_and_loadEwkTable(fipPath.data());
 
@@ -643,18 +643,18 @@ HZZ4lNtupleMaker::HZZ4lNtupleMaker(const edm::ParameterSet& pset) :
   TString strZZGGKFVar[9]={
     "Nominal", "PDFScaleDn", "PDFScaleUp", "QCDScaleDn", "QCDScaleUp", "AsDn", "AsUp", "PDFReplicaDn", "PDFReplicaUp"
   };
-  edm::FileInPath ggzzFIP_NNLO("ZZAnalysis/AnalysisStep/data/kfactors/Kfactor_Collected_ggHZZ_2l2l_NNLO_NNPDF_NarrowWidth_13TeV.root");
+  edm::FileInPath ggzzFIP_NNLO("HHZZbb/AnalysisStep/data/kfactors/Kfactor_Collected_ggHZZ_2l2l_NNLO_NNPDF_NarrowWidth_13TeV.root");
   fipPath=ggzzFIP_NNLO.fullPath();
   TFile* ggZZKFactorFile = TFile::Open(fipPath.data());
   for (unsigned int ikf=0; ikf<9; ikf++) spkfactor_ggzz_nnlo[ikf] = (TSpline3*)ggZZKFactorFile->Get(Form("sp_kfactor_%s", strZZGGKFVar[ikf].Data()))->Clone(Form("sp_kfactor_%s_NNLO", strZZGGKFVar[ikf].Data()));
   ggZZKFactorFile->Close();
-  edm::FileInPath ggzzFIP_NLO("ZZAnalysis/AnalysisStep/data/kfactors/Kfactor_Collected_ggHZZ_2l2l_NLO_NNPDF_NarrowWidth_13TeV.root");
+  edm::FileInPath ggzzFIP_NLO("HHZZbb/AnalysisStep/data/kfactors/Kfactor_Collected_ggHZZ_2l2l_NLO_NNPDF_NarrowWidth_13TeV.root");
   fipPath=ggzzFIP_NLO.fullPath();
   ggZZKFactorFile = TFile::Open(fipPath.data());
   for (unsigned int ikf=0; ikf<9; ikf++) spkfactor_ggzz_nlo[ikf] = (TSpline3*)ggZZKFactorFile->Get(Form("sp_kfactor_%s", strZZGGKFVar[ikf].Data()))->Clone(Form("sp_kfactor_%s_NLO", strZZGGKFVar[ikf].Data()));
   ggZZKFactorFile->Close();
 	
-  edm::FileInPath NNLOPS_weight_path("ZZAnalysis/AnalysisStep/data/ggH_NNLOPS_Weights/NNLOPS_reweight.root");
+  edm::FileInPath NNLOPS_weight_path("HHZZbb/AnalysisStep/data/ggH_NNLOPS_Weights/NNLOPS_reweight.root");
   fipPath=NNLOPS_weight_path.fullPath();
   TFile* NNLOPS_weight_file = TFile::Open(fipPath.data());
   gr_NNLOPSratio_pt_powheg_0jet = (TGraphErrors*)NNLOPS_weight_file->Get("gr_NNLOPSratio_pt_powheg_0jet");
@@ -667,22 +667,22 @@ HZZ4lNtupleMaker::HZZ4lNtupleMaker(const edm::ParameterSet& pset) :
 
     if(year == 2016)
     {
-        edm::FileInPath fipEleNotCracks("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_non_gap_ele_Moriond2017_v2.root");
+        edm::FileInPath fipEleNotCracks("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_non_gap_ele_Moriond2017_v2.root");
         TFile *root_file = TFile::Open(fipEleNotCracks.fullPath().data(),"READ");
         hTH2D_El_IdIsoSip_notCracks = (TH1*) root_file->Get("EGamma_SF2D")->Clone();
         root_file->Close();
        
-        edm::FileInPath fipEleCracks("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_gap_ele_Moriond2017_v2.root");
+        edm::FileInPath fipEleCracks("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_gap_ele_Moriond2017_v2.root");
         root_file = TFile::Open(fipEleCracks.fullPath().data(),"READ");
         hTH2D_El_IdIsoSip_Cracks = (TH1*) root_file->Get("EGamma_SF2D")->Clone();
         root_file->Close();
  
-        edm::FileInPath fipEleReco("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_RECO_ele_Moriond2017_v1.root");
+        edm::FileInPath fipEleReco("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_RECO_ele_Moriond2017_v1.root");
         TFile *root_file_reco = TFile::Open(fipEleReco.fullPath().data(),"READ");
         hTH2F_El_Reco = (TH2F*) root_file_reco->Get("EGamma_SF2D")->Clone();
         root_file_reco->Close();
 
-        edm::FileInPath fipEleRSE("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_RSE_ele_Moriond2017_v1.root");
+        edm::FileInPath fipEleRSE("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_RSE_ele_Moriond2017_v1.root");
         root_file = TFile::Open(fipEleRSE.fullPath().data(),"READ");
         hTH2F_El_RSE = (TH2F*) root_file->Get("EGamma_SF2D")->Clone();
         root_file->Close();
@@ -691,27 +691,27 @@ HZZ4lNtupleMaker::HZZ4lNtupleMaker(const edm::ParameterSet& pset) :
     else if (year == 2017)
       {
 
-        edm::FileInPath fipEleNotCracks("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/egammaEffi.txt_EGM2D_Moriond2018v1.root");
+        edm::FileInPath fipEleNotCracks("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/egammaEffi.txt_EGM2D_Moriond2018v1.root");
         TFile *root_file = TFile::Open(fipEleNotCracks.fullPath().data(),"READ");
         hTH2D_El_IdIsoSip_notCracks = (TH2F*) root_file->Get("EGamma_SF2D")->Clone();
         root_file->Close();
 		 
-        edm::FileInPath fipEleCracks("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/egammaEffi.txt_EGM2D_Moriond2018v1_gap.root");
+        edm::FileInPath fipEleCracks("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/egammaEffi.txt_EGM2D_Moriond2018v1_gap.root");
         root_file = TFile::Open(fipEleCracks.fullPath().data(),"READ");
         hTH2D_El_IdIsoSip_Cracks = (TH2F*) root_file->Get("EGamma_SF2D")->Clone();
         root_file->Close();
  
-        edm::FileInPath fipEleReco_highPt("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/egammaEffi.txt_EGM2D_Moriond2018v1_runBCDEF_passingRECO.root");
+        edm::FileInPath fipEleReco_highPt("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/egammaEffi.txt_EGM2D_Moriond2018v1_runBCDEF_passingRECO.root");
         TFile *root_file_reco_highPT = TFile::Open(fipEleReco_highPt.fullPath().data(),"READ");
         hTH2F_El_Reco_highPT = (TH2F*) root_file_reco_highPT->Get("EGamma_SF2D")->Clone();
         root_file_reco_highPT->Close();
 		 
-        edm::FileInPath fipEleReco_lowPt("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/egammaEffi.txt_EGM2D_Moriond2018v1_runBCDEF_passingRECO_lowEt.root");
+        edm::FileInPath fipEleReco_lowPt("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/egammaEffi.txt_EGM2D_Moriond2018v1_runBCDEF_passingRECO_lowEt.root");
         TFile *root_file_reco_lowPT = TFile::Open(fipEleReco_lowPt.fullPath().data(),"READ");
         hTH2F_El_Reco_lowPT = (TH2F*) root_file_reco_lowPT->Get("EGamma_SF2D")->Clone();
         root_file_reco_lowPT->Close();
 
-        edm::FileInPath fipEleRSE("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_RSE_ele_Moriond2017_v1.root");// FIXME UPDATE TO Moriond2018
+        edm::FileInPath fipEleRSE("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_RSE_ele_Moriond2017_v1.root");// FIXME UPDATE TO Moriond2018
         root_file = TFile::Open(fipEleRSE.fullPath().data(),"READ");
         hTH2F_El_RSE = (TH2F*) root_file->Get("EGamma_SF2D")->Clone();
         root_file->Close();
@@ -727,7 +727,7 @@ HZZ4lNtupleMaker::HZZ4lNtupleMaker(const edm::ParameterSet& pset) :
 
     if(year == 2016)
     {
-		  edm::FileInPath fipMu("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_mu_Moriond2017_v2.root");
+		  edm::FileInPath fipMu("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_mu_Moriond2017_v2.root");
         TFile *fMuWeight = TFile::Open(fipMu.fullPath().data(),"READ");
         hTH2D_Mu_All = (TH2D*)fMuWeight->Get("FINAL")->Clone();
         hTH2D_Mu_Unc = (TH2D*)fMuWeight->Get("ERROR")->Clone();
@@ -736,7 +736,7 @@ HZZ4lNtupleMaker::HZZ4lNtupleMaker(const edm::ParameterSet& pset) :
     }
     else if (year == 2017)
       {
-	edm::FileInPath fipMu("ZZAnalysis/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_mu_Moriond2018_final.root");
+	edm::FileInPath fipMu("HHZZbb/AnalysisStep/data/LeptonEffScaleFactors/ScaleFactors_mu_Moriond2018_final.root");
         TFile *fMuWeight = TFile::Open(fipMu.fullPath().data(),"READ");
         hTH2D_Mu_All = (TH2D*)fMuWeight->Get("FINAL")->Clone();
         hTH2D_Mu_Unc = (TH2D*)fMuWeight->Get("ERROR")->Clone();
@@ -752,7 +752,7 @@ HZZ4lNtupleMaker::HZZ4lNtupleMaker(const edm::ParameterSet& pset) :
 
   if (!skipHqTWeight) {
     //HqT weights
-    edm::FileInPath HqTfip("ZZAnalysis/AnalysisStep/test/Macros/HqTWeights.root");
+    edm::FileInPath HqTfip("HHZZbb/AnalysisStep/test/Macros/HqTWeights.root");
     std::string fipPath=HqTfip.fullPath();
     TFile *fHqt = TFile::Open(fipPath.data(),"READ");
     h_weight = (TH2D*)fHqt->Get("wH_400")->Clone();//FIXME: Ask simon to provide the 2D histo
@@ -761,14 +761,14 @@ HZZ4lNtupleMaker::HZZ4lNtupleMaker(const edm::ParameterSet& pset) :
 
   if (!skipFakeWeight) {
     //CR fake rate weight
-    TString filename;filename.Form("ZZAnalysis/AnalysisStep/test/Macros/FR2_2011_AA_electron.root");
-    if(year==2015)filename.Form("ZZAnalysis/AnalysisStep/test/Macros/FR2_AA_ControlSample_ABCD.root");
+    TString filename;filename.Form("HHZZbb/AnalysisStep/test/Macros/FR2_2011_AA_electron.root");
+    if(year==2015)filename.Form("HHZZbb/AnalysisStep/test/Macros/FR2_AA_ControlSample_ABCD.root");
     edm::FileInPath fipEleZX(filename.Data());
     std::string fipPath=fipEleZX.fullPath();
     TFile *FileZXWeightEle = TFile::Open(fipPath.data(),"READ");
 
-    filename.Form("ZZAnalysis/AnalysisStep/test/Macros/FR2_2011_AA_muon.root");
-    if(year==2015)filename.Form("ZZAnalysis/AnalysisStep/test/Macros/FR2_AA_muon.root");
+    filename.Form("HHZZbb/AnalysisStep/test/Macros/FR2_2011_AA_muon.root");
+    if(year==2015)filename.Form("HHZZbb/AnalysisStep/test/Macros/FR2_AA_muon.root");
     edm::FileInPath fipMuZX(filename.Data());
     fipPath=fipMuZX.fullPath();
     TFile *FileZXWeightMuo = TFile::Open(fipPath.data(),"READ");

@@ -6,7 +6,7 @@ def _():
     """put all the dirty stuff inside a function so it doesn't get imported with import *"""
     import os, re
 
-    with open(os.path.join(os.environ["CMSSW_BASE"], "src/ZZAnalysis/AnalysisStep/interface/miscenums.h")) as f:
+    with open(os.path.join(os.environ["CMSSW_BASE"], "src/HHZZbb/AnalysisStep/interface/miscenums.h")) as f:
         contents = f.read()
 
     lines = contents.split("\n")

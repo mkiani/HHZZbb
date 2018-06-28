@@ -14,12 +14,12 @@
 #include <DataFormats/PatCandidates/interface/CompositeCandidate.h>
 #include <DataFormats/PatCandidates/interface/Jet.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/CutSet.h>
-#include <ZZAnalysis/AnalysisStep/interface/DaughterDataHelpers.h>
-//#include <ZZAnalysis/AnalysisStep/interface/ZZMassErrors.h>
-//#include <ZZAnalysis/AnalysisStep/interface/MCHistoryTools.h>
-#include <ZZAnalysis/AnalysisStep/interface/FinalStates.h>
-#include <ZZAnalysis/AnalysisStep/interface/CompositeCandMassResolution.h>
+#include <HHZZbb/AnalysisStep/interface/CutSet.h>
+#include <HHZZbb/AnalysisStep/interface/DaughterDataHelpers.h>
+//#include <HHZZbb/AnalysisStep/interface/ZZMassErrors.h>
+//#include <HHZZbb/AnalysisStep/interface/MCHistoryTools.h>
+#include <HHZZbb/AnalysisStep/interface/FinalStates.h>
+#include <HHZZbb/AnalysisStep/interface/CompositeCandMassResolution.h>
 #include <FWCore/ParameterSet/interface/FileInPath.h>
 
 #include "TrackingTools/TransientTrack/interface/TransientTrackBuilder.h"
@@ -36,11 +36,11 @@
 #include <DataFormats/PatCandidates/interface/MET.h>
 #include <DataFormats/METReco/interface/PFMET.h>
 #include <DataFormats/METReco/interface/PFMETCollection.h>
-#include <ZZAnalysis/AnalysisStep/interface/Fisher.h>
-#include <ZZAnalysis/AnalysisStep/interface/Comparators.h>
-#include <ZZAnalysis/AnalysisStep/interface/utils.h>
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
-#include <ZZAnalysis/AnalysisStep/interface/JetCleaner.h>
+#include <HHZZbb/AnalysisStep/interface/Fisher.h>
+#include <HHZZbb/AnalysisStep/interface/Comparators.h>
+#include <HHZZbb/AnalysisStep/interface/utils.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/JetCleaner.h>
 #include <MelaAnalytics/GenericMEComputer/interface/GMECHelperFunctions.h>
 #include <KinZfitter/KinZfitter/interface/KinZfitter.h>
 
@@ -148,7 +148,7 @@ ZZCandidateFiller::ZZCandidateFiller(const edm::ParameterSet& iConfig) :
 
   if (setup < 2015) {// FIXME:  EbE corrections to be updated for Run II
     // Run I ebe corrections; obsolete
-    edm::FileInPath fip("ZZAnalysis/AnalysisStep/data/ebeOverallCorrections.Legacy2013.v0.root");
+    edm::FileInPath fip("HHZZbb/AnalysisStep/data/ebeOverallCorrections.Legacy2013.v0.root");
     std::string ebePath=fip.fullPath();
 
     // EbE corrections

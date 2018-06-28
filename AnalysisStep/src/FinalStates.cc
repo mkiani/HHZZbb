@@ -1,4 +1,4 @@
-#include <ZZAnalysis/AnalysisStep/interface/FinalStates.h>
+#include <HHZZbb/AnalysisStep/interface/FinalStates.h>
 
 namespace {
   const unsigned nFS = 29;

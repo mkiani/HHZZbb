@@ -7,8 +7,8 @@
 
 #include "TFile.h"
 #include "TTree.h"
-#include "ZZAnalysis/AnalysisStep/interface/Category.h"
-#include "ZZAnalysis/AnalysisStep/interface/Discriminants.h"
+#include "HHZZbb/AnalysisStep/interface/Category.h"
+#include "HHZZbb/AnalysisStep/interface/Discriminants.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <cmath>

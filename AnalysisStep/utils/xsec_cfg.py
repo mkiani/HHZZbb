@@ -4,7 +4,7 @@
 import FWCore.ParameterSet.Config as cms
 from FWCore.ParameterSet.VarParsing import VarParsing
 
-from ZZAnalysis.AnalysisStep.eostools import get_XRD_files_DAS
+from HHZZbb.AnalysisStep.eostools import get_XRD_files_DAS
 
 def get_max_files(DAS_name, max_files) :
   result = []

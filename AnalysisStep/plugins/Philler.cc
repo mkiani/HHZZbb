@@ -16,8 +16,8 @@
 
 
 
-#include <ZZAnalysis/AnalysisStep/interface/CutSet.h>
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/CutSet.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
 
 #include <vector>
 #include <string>

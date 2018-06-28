@@ -1,4 +1,4 @@
-#include "ZZAnalysis/AnalysisStep/interface/EwkCorrections.h"
+#include "HHZZbb/AnalysisStep/interface/EwkCorrections.h"
 #include "TLorentzVector.h"
 
 typedef ROOT::Math::LorentzVector<ROOT::Math::PxPyPzE4D<double> > LorentzVector;
@@ -13,7 +13,7 @@ namespace EwkCorrections
 //		TString name;
 //		TString cmssw_path;
 //		cmssw_path = getenv("CMSSW_BASE");
-//		TString path = cmssw_path+"/src/ZZAnalysis/AnalysisStep/src/";
+//		TString path = cmssw_path+"/src/HHZZbb/AnalysisStep/src/";
 //		
 //		if(dtag.Contains("ZZ")) name = path+"ZZ_EwkCorrections.dat";
 		myReadFile.open(dtag);

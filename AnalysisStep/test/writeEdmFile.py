@@ -17,7 +17,7 @@ APPLYMUCORR = False
 
 # Get absolute path
 import os
-PyFilePath = os.environ['CMSSW_BASE'] + "/src/ZZAnalysis/AnalysisStep/test/"
+PyFilePath = os.environ['CMSSW_BASE'] + "/src/HHZZbb/AnalysisStep/test/"
 
 ### ----------------------------------------------------------------------
 ### Standard sequence
@@ -51,7 +51,7 @@ process.CRPath = cms.Path(process.CR)
 ### Output module
 ### ----------------------------------------------------------------------
 
-from ZZAnalysis.AnalysisStep.ZZ4lEventContent import ZZ4lEventContent
+from HHZZbb.AnalysisStep.ZZ4lEventContent import ZZ4lEventContent
 
 process.out = cms.OutputModule(
     "PoolOutputModule",

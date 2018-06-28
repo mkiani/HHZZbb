@@ -35,10 +35,10 @@
 #include "tdrstyle.C"
 #include "CMS_lumi.C"
 #include "plotUtils.C"
-#include "ZZAnalysis/AnalysisStep/src/kFactors.C"
-#include "ZZAnalysis/AnalysisStep/src/cConstants.cc"
-#include "ZZAnalysis/AnalysisStep/src/Discriminants.cc"
-#include "ZZAnalysis/AnalysisStep/src/Category.cc"
+#include "HHZZbb/AnalysisStep/src/kFactors.C"
+#include "HHZZbb/AnalysisStep/src/cConstants.cc"
+#include "HHZZbb/AnalysisStep/src/Discriminants.cc"
+#include "HHZZbb/AnalysisStep/src/Category.cc"
 
 using namespace std;
 

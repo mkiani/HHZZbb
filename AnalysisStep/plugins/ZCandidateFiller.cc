@@ -19,11 +19,11 @@
 #include <DataFormats/Candidate/interface/ShallowCloneCandidate.h>
 #include <DataFormats/PatCandidates/interface/Muon.h>
 #include <DataFormats/PatCandidates/interface/Electron.h>
-#include <ZZAnalysis/AnalysisStep/interface/PhotonFwd.h>
+#include <HHZZbb/AnalysisStep/interface/PhotonFwd.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/CutSet.h>
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
-#include <ZZAnalysis/AnalysisStep/interface/DaughterDataHelpers.h>
+#include <HHZZbb/AnalysisStep/interface/CutSet.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/DaughterDataHelpers.h>
 
 #include <string>
 #include <Math/VectorUtil.h>

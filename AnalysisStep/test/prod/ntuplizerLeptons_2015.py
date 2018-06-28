@@ -1,7 +1,7 @@
 
 # Load default job config
 import os
-PyFilePath = os.environ['CMSSW_BASE'] + "/src/ZZAnalysis/AnalysisStep/test/"
+PyFilePath = os.environ['CMSSW_BASE'] + "/src/HHZZbb/AnalysisStep/test/"
 execfile(PyFilePath + "ntuplizerLeptons.py")
 
 # Silence output

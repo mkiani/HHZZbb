@@ -17,7 +17,7 @@ def sign(x):
 class Candidate:
 
     def __init__(self, treeEntry, options) :
-        self.lib = CDLL('libZZAnalysisAnalysisStep.so')
+        self.lib = CDLL('libHHZZbbAnalysisStep.so')
 
 	isMC = False
         if treeEntry.GetBranch("genHEPMCweight") :
@@ -89,7 +89,7 @@ class Candidate:
 	    self.computeKDs(treeEntry)
 		
 #	    # ICHEP2016 categories
-#	    self.category    = CDLL('libZZAnalysisAnalysisStep.so').categoryIchep16(
+#	    self.category    = CDLL('libHHZZbbAnalysisStep.so').categoryIchep16(
 #	        c_int(self.nExtraLep),
 #	        c_int(self.nExtraZ),
 #	        c_int(self.njets30),

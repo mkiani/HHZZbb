@@ -16,7 +16,7 @@
 #include "TGraphErrors.h"
 #include "HiggsAnalysis/CombinedLimit/interface/HZZ4LRooPdfs.h"
 #include "HiggsAnalysis/CombinedLimit/interface/HZZ2L2QRooPdfs.h"
-#include "ZZAnalysis/AnalysisStep/interface/Category.h"
+#include "HHZZbb/AnalysisStep/interface/Category.h"
 #include "Math/GenVector/LorentzVector.h"
 #include "Math/GenVector/PtEtaPhiM4D.h"
 

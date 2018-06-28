@@ -1,5 +1,5 @@
 // Include classes
-#include <ZZAnalysis/AnalysisStep/test/ZpXEstimation/include/CMS_lumi.h>
+#include <HHZZbb/AnalysisStep/test/ZpXEstimation/include/CMS_lumi.h>
 #include <iostream>
 
 

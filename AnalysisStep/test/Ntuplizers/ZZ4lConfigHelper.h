@@ -15,7 +15,7 @@
 #include <FWCore/ParameterSet/interface/ParameterSet.h>
 #include <DataFormats/Common/interface/TriggerResults.h>
 #include <FWCore/Common/interface/TriggerNames.h>
-#include <ZZAnalysis/AnalysisStep/interface/FinalStates.h>
+#include <HHZZbb/AnalysisStep/interface/FinalStates.h>
 
 #include <iostream>
 

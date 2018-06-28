@@ -3,11 +3,11 @@
  *  \author N. Amapane
  */
 
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
 //#include <Muon/MuonAnalysisTools/interface/MuonEffectiveArea.h>
-#include <ZZAnalysis/AnalysisStep/interface/CustomMuonEffectiveArea.h>
+#include <HHZZbb/AnalysisStep/interface/CustomMuonEffectiveArea.h>
 //#include <EGamma/EGammaAnalysisTools/interface/ElectronEffectiveArea.h>
-#include <ZZAnalysis/AnalysisStep/interface/CustomElectronEffectiveArea.h>
+#include <HHZZbb/AnalysisStep/interface/CustomElectronEffectiveArea.h>
 
 #include <iostream>
 #include <map>
@@ -206,7 +206,7 @@ float LeptonIsoHelper::combRelIsoPF(int sampleType, int setup, double rho, const
 }
 
 
-// Adapted from Hengne's implementation at: https://github.com/VBF-HZZ/UFHZZAnalysisRun2/blob/csa14/UFHZZ4LAna/interface/HZZ4LHelper.h#L3525
+// Adapted from Hengne's implementation at: https://github.com/VBF-HZZ/UFHHHZZbbRun2/blob/csa14/UFHZZ4LAna/interface/HZZ4LHelper.h#L3525
 void LeptonIsoHelper::fsrIso(const reco::PFCandidate* photon, edm::Handle<edm::View<pat::PackedCandidate> > pfcands, double& ptSumNe, double& ptSumCh, double & ptSumChByWorstPV) {
 
   // hardcoded cut values

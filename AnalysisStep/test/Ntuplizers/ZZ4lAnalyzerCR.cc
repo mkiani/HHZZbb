@@ -30,9 +30,9 @@
 #include <CommonTools/UtilAlgos/interface/TFileService.h>
 #include <DataFormats/Common/interface/MergeableCounter.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/DaughterDataHelpers.h>
-#include <ZZAnalysis/AnalysisStep/interface/FinalStates.h>
-#include <ZZAnalysis/AnalysisStep/interface/PUReweight.h>
+#include <HHZZbb/AnalysisStep/interface/DaughterDataHelpers.h>
+#include <HHZZbb/AnalysisStep/interface/FinalStates.h>
+#include <HHZZbb/AnalysisStep/interface/PUReweight.h>
 #include "ZZ4lConfigHelper.h"
 
 
@@ -45,7 +45,7 @@
 #include "TH2F.h"
 
 #define HCMSSW
-#include "ZZAnalysis/AnalysisStep/interface/Histograms.h"
+#include "HHZZbb/AnalysisStep/interface/Histograms.h"
 #include <algorithm>
 
 using namespace std;

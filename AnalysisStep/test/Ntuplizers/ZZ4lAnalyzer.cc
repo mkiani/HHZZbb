@@ -34,11 +34,11 @@
 #include "CommonTools/UtilAlgos/interface/TFileService.h"
 #include <DataFormats/Common/interface/MergeableCounter.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/DaughterDataHelpers.h>
-#include <ZZAnalysis/AnalysisStep/interface/FinalStates.h>
-#include <ZZAnalysis/AnalysisStep/interface/MCHistoryTools.h>
-#include <ZZAnalysis/AnalysisStep/interface/PUReweight.h>
-#include <ZZAnalysis/AnalysisStep/interface/Fisher.h>
+#include <HHZZbb/AnalysisStep/interface/DaughterDataHelpers.h>
+#include <HHZZbb/AnalysisStep/interface/FinalStates.h>
+#include <HHZZbb/AnalysisStep/interface/MCHistoryTools.h>
+#include <HHZZbb/AnalysisStep/interface/PUReweight.h>
+#include <HHZZbb/AnalysisStep/interface/Fisher.h>
 #include "ZZ4lConfigHelper.h"
 #include <boost/lexical_cast.hpp>
 
@@ -54,8 +54,8 @@
 #include "TH2F.h"
 
 #define HCMSSW
-#include "ZZAnalysis/AnalysisStep/interface/Histograms.h"
-#include <ZZAnalysis/AnalysisStep/interface/bitops.h>
+#include "HHZZbb/AnalysisStep/interface/Histograms.h"
+#include <HHZZbb/AnalysisStep/interface/bitops.h>
 #include <algorithm>
 
 using namespace std;

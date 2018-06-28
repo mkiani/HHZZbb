@@ -11,8 +11,8 @@ import pprint
 import subprocess
 from datetime import date
 from optparse import OptionParser
-from ZZAnalysis.AnalysisStep.eostools import *
-from ZZAnalysis.AnalysisStep.readSampleInfo import *
+from HHZZbb.AnalysisStep.eostools import *
+from HHZZbb.AnalysisStep.readSampleInfo import *
 
 
 def chunks(l, n):
@@ -105,7 +105,7 @@ cd $LS_SUBCWD
 #ls -l
 setenv ROOT_HIST 0
 if ( -s ZZ4lAnalysis.root ) then
- root -q -b '${CMSSW_BASE}/src/ZZAnalysis/AnalysisStep/test/prod/rootFileIntegrity.r(\"ZZ4lAnalysis.root\")'
+ root -q -b '${CMSSW_BASE}/src/HHZZbb/AnalysisStep/test/prod/rootFileIntegrity.r(\"ZZ4lAnalysis.root\")'
 else
  echo moving empty file
  mv ZZ4lAnalysis.root ZZ4lAnalysis.root.empty

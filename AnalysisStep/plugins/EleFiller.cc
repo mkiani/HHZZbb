@@ -16,8 +16,8 @@
 #include <FWCore/ParameterSet/interface/ParameterSet.h>
 #include <FWCore/Framework/interface/ESHandle.h>
 
-#include <ZZAnalysis/AnalysisStep/interface/CutSet.h>
-#include <ZZAnalysis/AnalysisStep/interface/LeptonIsoHelper.h>
+#include <HHZZbb/AnalysisStep/interface/CutSet.h>
+#include <HHZZbb/AnalysisStep/interface/LeptonIsoHelper.h>
 
 #include "EgammaAnalysis/ElectronTools/interface/EGammaMvaEleEstimatorCSA14.h"
 #include "EgammaAnalysis/ElectronTools/interface/EnergyScaleCorrection_class.h"

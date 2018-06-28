@@ -1,5 +1,5 @@
 // Include classes
-#include <ZZAnalysis/AnalysisStep/test/ZpXEstimation/include/SSmethod.h>
+#include <HHZZbb/AnalysisStep/test/ZpXEstimation/include/SSmethod.h>
 
 // Constructor
 //============================================================

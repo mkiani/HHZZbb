@@ -1,4 +1,4 @@
-from ZZAnalysis.AnalysisStep.defaults import *
+from HHZZbb.AnalysisStep.defaults import *
 
 ### ----------------------------------------------------------------------
 ###
@@ -14,7 +14,7 @@ declareDefault("XSEC", 1, globals())
     
 # Get absolute path
 import os
-PyFilePath = os.environ['CMSSW_BASE'] + "/src/ZZAnalysis/AnalysisStep/test/"
+PyFilePath = os.environ['CMSSW_BASE'] + "/src/HHZZbb/AnalysisStep/test/"
 
 ### ----------------------------------------------------------------------
 ### Standard sequence
