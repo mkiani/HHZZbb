@@ -1,10 +1,5 @@
-# HHZZbb
-# Framework for HHZZbb analysis
-
-
-
-ZZAnalysis
-==========
+HHZZbbAnalysis
+=============
 
 
 To install a complete CMSSW 10X area (including this package)
