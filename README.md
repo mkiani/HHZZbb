@@ -13,6 +13,7 @@ cd $CMSSW_BASE/src
 cmsenv
 chmod u+x ${TMPDIR}/checkout_10X.csh
 ${TMPDIR}/checkout_10X.csh
+```
 
 To update this package from the release
 ------------------------------------------
