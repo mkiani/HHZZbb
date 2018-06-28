@@ -37,8 +37,9 @@ git cms-init
 #### Please do not add any custom (non-CMSSW) package before this line ####
 
 #ZZAnalysis
-git clone https://github.com/CJLST/ZZAnalysis.git ZZAnalysis
-(cd ZZAnalysis; git checkout miniAOD_80X)
+git clone git@github.com:mkiani/HHZZbb.git HHZZbb
+(cd HHZZbb; git checkout master)
+
 
 #MuScleFit: probably tbf
 #git clone https://github.com/scasasso/usercode MuScleFit
