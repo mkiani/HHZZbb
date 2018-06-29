@@ -31,7 +31,6 @@ git pull
 ```
 Once you are ready to commit
 ```
-
 git pull
 git add [files to be added]
 git commit -m ["commit message"] [files to be added]
