@@ -71,7 +71,7 @@ git clone https://github.com/mhl0116/KinZfitter-1.git KinZfitter
 #### Please do not add any custom (non-CMSSW) package before this line ####
 
 #ZZAnalysis
-git clone git@github.com:mkiani/HHZZbb.git HHZZbb
+git clone https://github.com/mkiani/HHZZbb.git HHZZbb
 (cd HHZZbb; git checkout master)
 
 # Higgs Combination Package, Needed for the Double Crystall Ball function. 
