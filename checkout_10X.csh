@@ -75,7 +75,7 @@ git clone https://github.com/mkiani/HHZZbb.git HHZZbb
 (cd HHZZbb; git checkout master)
 
 # Higgs Combination Package, Needed for the Double Crystall Ball function. 
-git clone https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit.git HiggsAnalysis/CombinedLimit
+# git clone https://github.com/cms-analysis/HiggsAnalysis-CombinedLimit.git HiggsAnalysis/CombinedLimit
 
 #MuScleFit: probably tbf
 #git clone https://github.com/scasasso/usercode MuScleFit
